@@ -10,10 +10,10 @@ function Main() {
                 <p className="bg-[var(--bg-color-primary)] h-[110px] pl-[10px] rounded-[5px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, dolorum?</p>
                 <div className="flex justify-between">
                     <div className="flex items-center gap-[20px]">
-                        <button><img className="w-[25px]" src="/public/trash3.svg" alt="trash icon" /></button>
-                        <button><img className="w-[25px]" src="/public/pencil-square.svg" alt="edit icon" /></button>
+                        <button><img className="w-[25px]" src="/trash3.svg" alt="trash icon" /></button>
+                        <button><img className="w-[25px]" src="/pencil-square.svg" alt="edit icon" /></button>
                     </div>
-                    <button><img className="w-[25px]" src="/public/check2.svg" alt="check icon" /></button>
+                    <button><img className="w-[25px]" src="/check2.svg" alt="check icon" /></button>
                 </div>
             </div>
         </main>
