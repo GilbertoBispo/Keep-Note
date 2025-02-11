@@ -3,10 +3,10 @@ import Main from "./components/Main"
 
 function ApplicationPage() {
     return (
-        <>
-            <Header/>   
+        <div className="h-[100vh] flex flex-col gap-[15px]">
+            <Header/>
             <Main/>
-        </>
+        </div>
     )
 }
 

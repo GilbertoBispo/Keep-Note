@@ -8,15 +8,15 @@ const config: Config = {
   theme: {
     extend: {
         colors:{ 
-            bgColorPrimary: "var(--bg-color-primary)",
-            bgColorContainer: "var(--bg-color-container)",
-            textColor: "var(--text-color)"
+          bgColorPrimary: "var(--bg-color-primary)",
+          bgColorContainer: "var(--bg-color-container)",
+          textColor: "var(--text-color)"
         },
         fontFamily: {
-            fontFamily: ["var(--font-family)", "sans-serif"]
+          fontFamily: ["var(--font-family)", "sans-serif"]
         },
         boxShadow: {
-            boxShadow: "var(--box-shadow)"
+          boxShadow: "var(--box-shadow)"
         }
     },
   },
