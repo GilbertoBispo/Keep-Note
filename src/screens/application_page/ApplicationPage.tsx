@@ -3,7 +3,7 @@ import Main from "./components/Main"
 
 function ApplicationPage() {
     return (
-        <div className="h-[100vh] flex flex-col gap-[15px]">
+        <div className="h-full flex flex-col gap-[15px] w-full">
             <Header/>
             <Main/>
         </div>

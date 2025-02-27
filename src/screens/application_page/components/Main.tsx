@@ -1,26 +1,30 @@
 import NoteContainer from "./main_components/NoteContainer"
 import { useState } from "react"
 
+interface Note {
+    id: number,
+    title: string,
+    description: string
+}
+
 function Main() {
     const [noteTitle, setNoteTitle] = useState("")
     const [noteDescription, setNoteDescription] = useState("")
-    const [note, setNote] = useState({
-        title: "",
-        description: ""
-    })
+    const [note, setNote] = useState<Note[]>([])
     
 
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
 
         const newNote = {
+            id: Date.now(),
             title: noteTitle,
             description: noteDescription
         }
 
         setNoteTitle("")
         setNoteDescription("")
-        setNote(newNote)
+        setNote([...note, newNote])
     }
     
     return (
@@ -30,7 +34,7 @@ function Main() {
                 <input value={noteDescription} onChange={(e) => {setNoteDescription(e.target.value)}} className="bg-[var(--bg-color-primary)] w-full p-[5px] rounded-[5px]" type="text" placeholder="Descrição da nota"/>
                 <input className="bg-[var(--bg-color-primary)] w-full p-[5px] rounded-[5px] hover:bg-[var(--button-hover)]" type="submit" value="Adicionar"/>
             </form>
-            <NoteContainer note={note}/>
+            <NoteContainer notes={note}/>
         </main>
     )
 }
