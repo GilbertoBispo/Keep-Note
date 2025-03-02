@@ -22,7 +22,6 @@ function NoteContainer (noteProp: noteType) {
                                 <button><img className="w-[25px]" src="/trash3.svg" alt="trash icon" /></button>
                                 <button><img className="w-[25px]" src="/pencil-square.svg" alt="edit icon" /></button>
                             </div>
-                            <button><img className="w-[25px]" src="/check2.svg" alt="check icon" /></button>
                         </div>
                     </li>
                 )

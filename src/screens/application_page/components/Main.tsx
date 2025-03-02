@@ -10,7 +10,7 @@ interface Note {
 function Main() {
     const [noteTitle, setNoteTitle] = useState("")
     const [noteDescription, setNoteDescription] = useState("")
-    const [note, setNote] = useState<Note[]>([])
+    const [notes, setNote] = useState<Note[]>([])
     
 
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -24,7 +24,7 @@ function Main() {
 
         setNoteTitle("")
         setNoteDescription("")
-        setNote([...note, newNote])
+        setNote([...notes, newNote])
     }
     
     return (
@@ -34,7 +34,7 @@ function Main() {
                 <input value={noteDescription} onChange={(e) => {setNoteDescription(e.target.value)}} className="bg-[var(--bg-color-primary)] w-full p-[5px] rounded-[5px]" type="text" placeholder="Descrição da nota"/>
                 <input className="bg-[var(--bg-color-primary)] w-full p-[5px] rounded-[5px] hover:bg-[var(--button-hover)]" type="submit" value="Adicionar"/>
             </form>
-            <NoteContainer notes={note}/>
+            <NoteContainer notes={notes}/>
         </main>
     )
 }
