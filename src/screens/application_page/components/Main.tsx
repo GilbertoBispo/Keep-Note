@@ -26,6 +26,14 @@ function Main() {
         setNoteDescription("")
         setNote([...notes, newNote])
     }
+
+    function deleteButton() {
+        console.log("delete")
+    }
+
+    function editButton() {
+        console.log("edit")
+    }
     
     return (
         <main className="flex flex-col items-center gap-[25px]">
@@ -34,7 +42,7 @@ function Main() {
                 <input value={noteDescription} onChange={(e) => {setNoteDescription(e.target.value)}} className="bg-[var(--bg-color-primary)] w-full p-[5px] rounded-[5px]" type="text" placeholder="Descrição da nota"/>
                 <input className="bg-[var(--bg-color-primary)] w-full p-[5px] rounded-[5px] hover:bg-[var(--button-hover)]" type="submit" value="Adicionar"/>
             </form>
-            <NoteContainer notes={notes}/>
+            <NoteContainer onDeleteNote={deleteButton} onEditButton={editButton} notes={notes}/>
         </main>
     )
 }
