@@ -5,7 +5,6 @@ Um aplicativo moderno de anotações feito com React + Vite, inspirado no Google
 - React + Vite
 - Node.js + Express.js
 - Tailwind
-- Redux
 
 ## 📌 Funcionalidades
 - Registro e login de usuários
